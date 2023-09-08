@@ -15,4 +15,6 @@ public class Comment {
     private Long id;
     @Column(name = "text", columnDefinition = "text")
     private String text;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    private Post post;
 }

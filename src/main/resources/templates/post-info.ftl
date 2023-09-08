@@ -6,6 +6,9 @@
 </head>
 <body>
     Author: ${info.author}<br>
+    <#list images as img>
+        <img src="/images/${img.id}" height="60px"/><br><br>
+    </#list>
     Post:<br>${info.text}
     <form action="/post/delete/${info.id}" method="post">
         <input type="submit" value="Delete post">
