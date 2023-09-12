@@ -4,10 +4,12 @@ import com.example.OnlineBlog.model.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 import java.util.List;
-
+@Repository
+@Transactional
 public interface CommentRepository extends JpaRepository<Comment, Long> {
     @Query(value = "SELECT * FROM comment\n" +
             "WHERE post_id IN(SELECT id FROM post\n" +

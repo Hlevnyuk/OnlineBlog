@@ -5,12 +5,13 @@
     <title>Online-Blog</title>
 </head>
 <body>
-    Author: ${info.author}<br>
+    Author: <a href="/user/${info.user.id}" ${info.user.name}</a><br>
     <#list images as img>
         <img src="/images/${img.id}" height="60px"/><br><br>
     </#list>
     Post:<br>${info.text}
     <form action="/post/delete/${info.id}" method="post">
+        <input type="hidden" name="_csrf" value="${_csrf.token}">
         <input type="submit" value="Delete post">
     </form>
     Comments
@@ -24,6 +25,7 @@
     <form action="/comment/create/${info.id}" method="post">
         Create a comment:<br>
         text: <input type="text" name="text"/>
+        <input type="hidden" name="_csrf" value="${_csrf.token}">
         <input type="submit" value="publication"/>
     </form>
 </body>

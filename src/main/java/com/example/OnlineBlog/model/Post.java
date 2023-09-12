@@ -21,13 +21,14 @@ public class Post {
     private Long id;
     @Column(name = "text")
     private String text;
-    @Column(name = "author")
-    private String author;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Comment> comments = new ArrayList<>();
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "post")
     private List<Image> images = new ArrayList<>();
     private Long previewImageId;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    @JoinColumn
+    private User user;
     private LocalDateTime dateOfCreated;
     @PrePersist
     private void init(){

@@ -26,4 +26,7 @@ public class UserService {
         userRepository.save(user);
         return true;
     }
+    public User findUserByPostId(Long id){
+        return userRepository.findByPostId(id);
+    }
 }

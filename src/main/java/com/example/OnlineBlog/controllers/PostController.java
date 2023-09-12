@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.security.Principal;
 
 @Controller
 @RequiredArgsConstructor
@@ -21,8 +22,9 @@ public class PostController {
     private final PostService postService;
     private final CommentService commentService;
     @GetMapping("/")
-    public String postPage(Model model){
+    public String postPage(Model model, Principal principal){
         model.addAttribute("posts", postService.listPost());
+        model.addAttribute("user", postService.getUserByPrincipal(principal));
         return "main";
     }
     @GetMapping("/post/{id}")
@@ -36,8 +38,8 @@ public class PostController {
     @PostMapping("/post/create")
     public String postCreate(@RequestParam("file1") MultipartFile file1,
                              @RequestParam("file2") MultipartFile file2,
-                             @RequestParam("file3") MultipartFile file3, Post post) throws IOException {
-        postService.savePost(post, file1, file2, file3);
+                             @RequestParam("file3") MultipartFile file3, Post post, Principal principal) throws IOException {
+        postService.savePost(principal, post, file1, file2, file3);
         return "redirect:/";
     }
     @PostMapping("/post/delete/{id}")
