@@ -5,7 +5,7 @@
     <title>Online-Blog</title>
 </head>
 <body>
-    Author: <a href="/user/${info.user.id}" ${info.user.name}</a><br>
+    Author: <a href="/user/${info.user.id}"> ${info.user.name}</a><br>
     <#list images as img>
         <img src="/images/${img.id}" height="60px"/><br><br>
     </#list>

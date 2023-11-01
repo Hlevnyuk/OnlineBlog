@@ -13,6 +13,9 @@
                 <input type="submit" value="Sign Out"/>
             </form>
             <a href="/user/${user.id}"><h1>Profile</h2></a>
+            <#if user.isAdmin()>
+                <a href="/admin">Admin panel</a>
+            </#if>
         <#else>
             <a href = "/login">Sign in</a>
         </#if>
