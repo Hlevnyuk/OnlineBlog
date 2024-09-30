@@ -2,9 +2,65 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:text="${title}"></title>
+    <link rel="stylesheet" href="/static/css/main.css" th:href="@{/css/main.css}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<p th:text="'Hello, ' + ${title} + '!'"></p>
+    <header>
+        <nav>
+            <a href="#" class="logo"><img src="images/logo.png" alt="My Blog Logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to My Online Blog</h1>
+        <p>Sharing thoughts, insights, and stories with the world.</p>
+        <a href="#" class="btn">Read More</a> <!-- Button in hero section -->
+    </section>
+    <section class="blog-posts">
+        <h2>Latest Posts</h2>
+        <div class="posts-container">
+            <div class="post-card">
+                <img src="https://via.placeholder.com/300x200" alt="Post Image">
+                <h3>Blog Post 1</h3>
+                <p>Some brief description of the first blog post...</p>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+
+            <div class="post-card">
+                <img src="https://via.placeholder.com/300x200" alt="Post Image">
+                <h3>Blog Post 2</h3>
+                <p>Some brief description of the second blog post...</p>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+
+            <div class="post-card">
+                <img src="https://via.placeholder.com/300x200" alt="Post Image">
+                <h3>Blog Post 3</h3>
+                <p>Some brief description of the third blog post...</p>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+        </div>
+    </section>
+    <section class="slider">
+        <h2>Featured Stories</h2>
+        <div class="slider-container">
+            <div class="slider-item">Story 1</div>
+            <div class="slider-item">Story 2</div>
+            <div class="slider-item">Story 3</div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 MyBlog. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/js/main.js"></script>
 </body>
 </html>

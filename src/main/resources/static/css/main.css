@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo img {
+    height: 50px; /* Adjust this value depending on your logo size */
+}
+
+.btn:hover {
+    background-color: #ff4500;
+}
+
+.blog-posts {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.blog-posts h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.posts-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.post-card {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 30%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-card img {
+    width: 100%;
+}
+
+.post-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.post-card p {
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.read-more:hover {
+    background-color: #555;
+}
+
+.slider {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.slider h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.slider-item {
+    flex: 0 0 30%;
+    background-color: #444;
+    padding: 30px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+/* General Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ff4500;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Button for smaller variations (if needed) */
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* Button for larger variations (if needed) */
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+/* Read more button */
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Button Styling */
+nav ul li a {
+    color: #333; /* Dark grey text */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light grey border */
+}
+
+nav ul li a:visited {
+    color: #555;
+}
+
+/* Make the buttons stand out with simple contrast */
+nav ul li a:hover,
+nav ul li a:focus {
+    outline: none; /* Remove default outline on focus */
+}
+.hero {
+    background: url('../images/background.png') no-repeat center center/cover;
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
